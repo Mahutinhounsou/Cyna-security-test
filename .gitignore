@@ -1,0 +1,13 @@
+# logs générés
+data/logs/
+
+# données enrichies
+data/enriched/
+
+# fichiers python compilés
+__pycache__/
+*.pyc
+
+# environnement python
+.venv/
+env/
