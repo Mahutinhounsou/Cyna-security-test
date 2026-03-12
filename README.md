@@ -54,23 +54,23 @@ Le pipeline suit les étapes suivantes :
 # Structure du projet
 cyna-security-test/
 
-ingestion/
-generate_logs.py génération des logs de sécurité
-load_threat_feed.py ingestion du flux de Threat Intelligence
+├── ingestion
+│ ├── generate_logs.py # génération des logs de sécurité
+│ └── load_threat_feed.py # ingestion du flux de Threat Intelligence
 
-processing/
-enrich_logs.py enrichissement des logs avec les IP malveillantes
+├── processing
+│ └── enrich_logs.py # enrichissement des logs avec les IP malveillantes
 
-dashboards/
-dashboard.py dashboard Streamlit pour visualiser les résultats
+├── dashboards
+│ └── dashboard.py # dashboard Streamlit pour visualiser les résultats
 
-data/
-logs/ logs générés (IDS et access)
-threat_feed/ flux d’IP malveillantes
-enriched/ dataset enrichi final
+├── data
+│ ├── logs/ # logs générés (IDS et access)
+│ ├── threat_feed/ # flux d’IP malveillantes
+│ └── enriched/ # dataset enrichi final
 
-README.md
-requirements.txt
+├── requirements.txt # dépendances du projet
+└── README.md # documentation du projet
 
 
 ---
