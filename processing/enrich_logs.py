@@ -52,7 +52,7 @@ def main():
 
                 parts = line.split(" - ")
 
-                # vérifier que la ligne contient assez d'informations
+                # vérifier que la ligne contient assez d'informations pour accéder à connection
                 if len(parts) < 5:
                     continue
 
