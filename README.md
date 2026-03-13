@@ -4,7 +4,7 @@
 
 Ce projet implémente un pipeline de traitement de **logs de sécurité** permettant d'analyser des événements réseau et de détecter des activités potentiellement malveillantes.
 
-L'objectif est de construire une pipeline simple mais complète permettant :
+L'objectif est de construire une pipeline permettant :
 
 - d’ingérer des logs de sécurité générés artificiellement
 - d’intégrer un flux de **Threat Intelligence** contenant des IP malveillantes
@@ -102,7 +102,7 @@ Cette base contient des IP identifiées comme malveillantes.
 
 Chaque IP possède un **nombre de signalements** correspondant au nombre de listes noires sur lesquelles elle apparaît.
 
-Exemple : 2.57.121.25 10
+Exemple : `2.57.121.25 10`
 
 Cela signifie que cette IP apparaît dans **10 blacklists différentes**.
 
@@ -205,7 +205,7 @@ Cette organisation est classique dans les pipelines data et permet de :
 # Installation
 
 Installer les dépendances :
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 
 ---
@@ -213,7 +213,7 @@ pip install -r requirements.txt
 # Exécution
 
 ### 1. Générer les logs
-python ingestion/generate_logs.py
+`python ingestion/generate_logs.py`
 
 
 ---
@@ -221,7 +221,7 @@ python ingestion/generate_logs.py
 ### 2. Charger le flux de Threat Intelligence
 
 
-python ingestion/load_threat_feed.py
+`python ingestion/load_threat_feed.py`
 
 
 ---
@@ -229,7 +229,7 @@ python ingestion/load_threat_feed.py
 ### 3. Enrichir les logs
 
 
-python processing/enrich_logs.py
+`python processing/enrich_logs.py`
 
 
 ---
@@ -237,7 +237,7 @@ python processing/enrich_logs.py
 ### 4. Lancer le dashboard
 
 
-python -m streamlit run dashboards/dashboard.py
+`python -m streamlit run dashboards/dashboard.py`
 
 
 ---
@@ -252,7 +252,7 @@ Le dashboard permet ensuite d'explorer ces événements et d’identifier les co
 
 # Améliorations possibles
 
-- ajout de nouvelles sources de Threat Intelligence
+- ajout de nouvelles sources de Threat Intelligence 
 - stockage dans une base de données
 - automatisation du pipeline
 - ajout d'analyses temporelles des attaques
