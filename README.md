@@ -246,8 +246,19 @@ Installer les dépendances :
 
 Le pipeline permet d'analyser plus de **100 000 logs** et d'identifier les événements associés à des IP malveillantes.
 
-Le dashboard permet ensuite d'explorer ces événements et d’identifier les comportements suspects.
+## Exemple de résultat
 
+Après exécution du pipeline, les logs sont enrichis avec les informations de Threat Intelligence.
+
+Exemple de dataset enrichi :
+
+| log_type | timestamp | source_ip | destination_ip | matched_ip | reports | is_malicious |
+|--------|--------|--------|--------|--------|--------|--------|
+| ids | 2026-03-12 12:34:51 | 45.196.97.242 | 181.135.76.94 | 45.196.97.242 | 1 | True |
+| ids | 2026-03-12 12:34:52 | 173.234.226.10 | 100.196.102.194 | 173.234.226.10 | 1 | True |
+| access | 2026-03-12 12:39:15 | 140.127.56.118 | None | 140.127.56.118 | 1 | True |
+
+Le dashboard permet ensuite d'explorer ces données et d'identifier rapidement les IP suspectes.
 ---
 
 # Améliorations possibles
